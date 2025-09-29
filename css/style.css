@@ -234,3 +234,121 @@ footer p {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
   font-family: 'Times New Roman', serif;
 }
+
+
+ .tree {
+  width: 100%;
+  margin: 50px auto;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.tree ul ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tree li {
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #3b82f6;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #3b82f6;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 2px solid #3b82f6;
+  border-radius: 0 8px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 8px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #3b82f6;
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 2px solid #3b82f6;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 13px;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: white;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.15);
+  min-width: 100px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.tree li a:hover,
+.tree li a:hover + ul li a {
+  background: #e3f2fd;
+  color: #1e3a8a;
+  border-color: #1e3a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+}
+
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #1e3a8a;
+  border-width: 3px;
+}
