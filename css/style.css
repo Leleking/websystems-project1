@@ -234,6 +234,140 @@ footer p {
   font-family: 'Times New Roman', serif;
 }
 
+/* Mobile Menu Styles */
+.mobile-menu-checkbox {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1000;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Hamburger Animation */
+.mobile-menu-checkbox:checked + .mobile-menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-checkbox:checked + .mobile-menu-toggle span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.mobile-menu-checkbox:checked + .mobile-menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #1e3a8a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .mobile-menu-checkbox:checked ~ .nav-menu {
+    left: 0;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    display: block;
+    text-align: center;
+    min-width: 200px;
+  }
+  
+  .nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+  
+  main {
+    padding: 20px 15px;
+  }
+  
+  section {
+    padding: 25px 20px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .heritage-generation {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-menu a {
+    font-size: 1.3rem;
+    min-width: 150px;
+  }
+}
+
 
  .tree {
   width: 100%;
