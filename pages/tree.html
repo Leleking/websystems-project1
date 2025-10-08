@@ -3,44 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the interactive Nortey family tree showing connections between family members from Mr. Odarmetey (Laryea) through multiple generations." />
     <title>Family Tree | Family Hub</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
       <div class="header-container">
         <div class="logo">
           <h1>Family Tree</h1>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <input
             type="checkbox"
             id="mobile-menu-checkbox"
             class="mobile-menu-checkbox"
+            aria-hidden="true"
           />
-          <label for="mobile-menu-checkbox" class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label
+            for="mobile-menu-checkbox"
+            class="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </label>
-          <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="heritage.html">Heritage</a></li>
-            <li><a href="tree.html" class="active">Tree</a></li>
+          <ul class="nav-menu" role="menubar">
+            <li role="none">
+              <a href="../index.html" role="menuitem">Home</a>
+            </li>
+            <li role="none">
+              <a href="gallery.html" role="menuitem">Gallery</a>
+            </li>
+            <li role="none">
+              <a href="heritage.html" role="menuitem">Heritage</a>
+            </li>
+            <li role="none">
+              <a
+                href="tree.html"
+                class="active"
+                role="menuitem"
+                aria-current="page"
+                >Tree</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <div>
-        <h2>The Nortey Family Tree</h2>
-        <div class="tree">
-          <ul>
-            <li>
-              <a href="#">Mr. Odarmetey (Laryea)</a>
-              <ul>
+    <main id="main-content" role="main">
+      <section aria-labelledby="family-tree-heading">
+        <h2 id="family-tree-heading">The Nortey Family Tree</h2>
+        <div class="tree" role="tree" aria-label="Nortey Family Tree Structure">
+          <ul role="group" aria-label="Family tree starting with Mr. Odarmetey (Laryea)">
+            <li role="treeitem" aria-expanded="true" aria-label="Mr. Odarmetey (Laryea), patriarch of the family">
+              <span tabindex="0" role="button" aria-describedby="patriarch-desc">Mr. Odarmetey (Laryea)</span>
+              <span id="patriarch-desc" class="sr-only">Patriarch of the Nortey family, father to multiple children</span>
+              <ul role="group" aria-label="Children of Mr. Odarmetey">
                 <li>
                   <a href="#">Mr.Simeon Odarmetey (Laryea) & Mrs. Odarmetey</a>
                   <ul>
@@ -51,6 +78,8 @@
                       <a
                         target="_blank"
                         href="https://www.instagram.com/xgeorgiamomo/"
+                        aria-label="Georgia Momo Nortey's Instagram profile (opens in new tab)"
+                        rel="noopener noreferrer"
                         >Georgia Momo Nortey</a
                       >
                       <ul>
@@ -58,6 +87,8 @@
                           <a
                             target="_blank"
                             href="https://www.instagram.com/lionelnortey1/"
+                            aria-label="Lionel Nortey's Instagram profile (opens in new tab)"
+                            rel="noopener noreferrer"
                             >Lionel Nortey</a
                           >
                           <ul>
@@ -68,6 +99,8 @@
                           <a
                             target="_blank"
                             href="https://www.instagram.com/jeffreynortey1/"
+                            aria-label="Jeffrey Nortey's Instagram profile (opens in new tab)"
+                            rel="noopener noreferrer"
                             >Jeffrey Nortey</a
                           >
                         </li>
@@ -75,6 +108,8 @@
                           <a
                             target="_blank"
                             href="https://www.instagram.com/simeon_nortey/"
+                            aria-label="Simeon Nortey's Instagram profile (opens in new tab)"
+                            rel="noopener noreferrer"
                             >Simeon Nortey</a
                           >
                         </li>
@@ -82,6 +117,8 @@
                           <a
                             target="_blank"
                             href="https://www.instagram.com/terkperki_nortey/"
+                            aria-label="Rhodalyn Nortey's Instagram profile (opens in new tab)"
+                            rel="noopener noreferrer"
                             >Rhodalyn Nortey</a
                           >
                         </li>
@@ -119,7 +156,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Family Motto - 3D (Determination Determines Destiny)</p>
     </footer>
   </body>

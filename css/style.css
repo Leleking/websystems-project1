@@ -1,3 +1,47 @@
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #1e3a8a;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 9999;
+  font-weight: bold;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+*:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -53,10 +97,13 @@ nav a {
   font-weight: 400;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 nav a.active {
@@ -147,13 +194,15 @@ strong {
   border: 2px solid #e5e7eb;
 }
 
-.gallery-item:hover {
+.gallery-item:hover,
+.gallery-item:focus-within {
   transform: translateY(-8px) rotate(1deg);
   box-shadow: 0 20px 40px rgba(30, 58, 138, 0.3);
   border-color: #3b82f6;
 }
 
-.gallery-item:nth-child(even):hover {
+.gallery-item:nth-child(even):hover,
+.gallery-item:nth-child(even):focus-within {
   transform: translateY(-8px) rotate(-1deg);
 }
 
@@ -163,6 +212,7 @@ strong {
   object-fit: contain;
 }
 
+.gallery-item figcaption,
 .gallery-item div {
   padding: 20px;
   text-align: center;
@@ -188,7 +238,8 @@ strong {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.heritage-person:hover {
+.heritage-person:hover,
+.heritage-person:focus-within {
   transform: translateX(5px);
   box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
 }
@@ -251,8 +302,11 @@ footer p {
   z-index: 1000;
 }
 
-.mobile-menu-toggle:hover {
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
   background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 .mobile-menu-toggle span {
@@ -470,12 +524,15 @@ footer p {
 }
 
 .tree li a:hover,
+.tree li a:focus,
 .tree li a:hover + ul li a {
   background: #e3f2fd;
   color: #1e3a8a;
   border-color: #1e3a8a;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
 }
 
 .tree li a:hover + ul li::after,

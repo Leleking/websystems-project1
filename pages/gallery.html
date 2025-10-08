@@ -3,137 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the Nortey family photo gallery featuring memories, milestones, and moments from family members across generations."
+    />
     <title>Gallery | Family Hub</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
       <div class="header-container">
         <div class="logo">
           <h1>Family Gallery</h1>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <input
             type="checkbox"
             id="mobile-menu-checkbox"
             class="mobile-menu-checkbox"
+            aria-hidden="true"
           />
-          <label for="mobile-menu-checkbox" class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label
+            for="mobile-menu-checkbox"
+            class="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </label>
-          <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="gallery.html" class="active">Gallery</a></li>
-            <li><a href="heritage.html">Heritage</a></li>
-            <li><a href="tree.html">Tree</a></li>
+          <ul class="nav-menu" role="menubar">
+            <li role="none">
+              <a href="../index.html" role="menuitem">Home</a>
+            </li>
+            <li role="none">
+              <a
+                href="gallery.html"
+                class="active"
+                role="menuitem"
+                aria-current="page"
+                >Gallery</a
+              >
+            </li>
+            <li role="none">
+              <a href="heritage.html" role="menuitem">Heritage</a>
+            </li>
+            <li role="none"><a href="tree.html" role="menuitem">Tree</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Visual Archive of the Norteys</h2>
+    <main id="main-content" role="main">
+      <section aria-labelledby="gallery-intro-heading">
+        <h2 id="gallery-intro-heading">Visual Archive of the Norteys</h2>
         <p>
           Welcome to our family gallery a collection of photos, videos, and
           stories that tell the story of the Norteys through the years.
         </p>
       </section>
 
-      <section>
-        <h3>Our Photos</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="../img/jeff.jpeg" alt="Jeffrey Nortey" />
-            <div>Our Superstar - Jeffrey Nortey</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/sis_grad.jpeg" alt="Sister Graduation" />
-            <div>Our little Sister's Graduation</div>
-          </div>
-          <div class="gallery-item">
+      <section aria-labelledby="photos-heading">
+        <h3 id="photos-heading">Our Photos</h3>
+        <div class="gallery-grid" role="grid" aria-label="Family photo gallery">
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/jeff.jpeg"
+              alt="Jeffrey Nortey posing confidently for a portrait photo"
+            />
+            <figcaption>Our Superstar - Jeffrey Nortey</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/sis_grad.jpeg"
+              alt="Rhodalyn Nortey in graduation cap and gown smiling at her graduation ceremony"
+            />
+            <figcaption>Our little Sister's Graduation</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/baby_calix.jpeg"
-              alt="A baby sitting and using 2 computer monitors and a laptop"
+              alt="Baby Calix sitting at a desk with two computer monitors and a laptop, appearing to work like an adult"
             />
-            <div>Baby Calix using the computer</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/simeon.jpeg" alt="Simeon thinking" />
-            <div>Simeon stuck on code</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/lionel_and_calix.jpeg" alt="Father and son " />
-            <div>Lionel and Calix at church</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/dad.jpeg" alt="Mr Nortey in a suit" />
-            <div>Mr Nortey</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Baby Calix using the computer</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/simeon.jpeg"
+              alt="Simeon Nortey looking thoughtful and concentrated while working on code"
+            />
+            <figcaption>Simeon stuck on code</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/lionel_and_calix.jpeg"
+              alt="Lionel Nortey holding his young son Calix at church, both dressed nicely"
+            />
+            <figcaption>Lionel and Calix at church</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/dad.jpeg"
+              alt="Mr Emmanuel Nortey dressed formally in a dark suit, looking distinguished"
+            />
+            <figcaption>Mr Nortey</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/standoff.jpeg"
-              alt="2 guys standing holding guiters"
+              alt="Two young men standing facing each other, each holding a guitar in a playful musical standoff"
             />
-            <div>Standoff</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Standoff</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/dad_and_sis.jpeg"
-              alt="Father and daughter hugging and smiling"
+              alt="Mr Emmanuel Nortey and his daughter Rhodalyn sharing a warm embrace and smiling happily"
             />
-            <div>Dad and daughter</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/face.jpeg" alt="Jeffrey posing for the camera" />
-            <div>Jeffrey being awesome</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Dad and daughter</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/face.jpeg"
+              alt="Jeffrey Nortey posing confidently for the camera with a charismatic expression"
+            />
+            <figcaption>Jeffrey being awesome</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/simeon_jeff.jpeg"
-              alt="Simeon and Jeffrey in South Africa laughing opposite each other"
+              alt="Simeon and Jeffrey Nortey laughing together while facing each other during their time in South Africa"
             />
-            <div>Simeon and Jeffrey in South Africa</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Simeon and Jeffrey in South Africa</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/simeon_kigali.jpeg"
-              alt="Simeon in a Rwandian outfit"
+              alt="Simeon Nortey wearing traditional Rwandan cultural attire while visiting Kigali"
             />
-            <div>Simeon in Rwanda</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Simeon in Rwanda</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/elizabeth.jpeg"
-              alt="a dog lying in a couch asleep"
+              alt="Elizabeth, the family dog, lying peacefully asleep on a comfortable couch"
             />
-            <div>Elizabeth just chilling</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>Elizabeth just chilling</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/trio.jpeg"
-              alt="Young Lionel, Jeffrey and Simeon"
+              alt="A nostalgic photo of young Lionel, Jeffrey, and Simeon Nortey together as children"
             />
-            <div>There was a time...</div>
-          </div>
-          <div class="gallery-item">
-            <img src="../img/date.jpeg" alt="Mother and father at dinner" />
-            <div>Mom and Dad</div>
-          </div>
-          <div class="gallery-item">
+            <figcaption>There was a time...</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
+            <img
+              src="../img/date.jpeg"
+              alt="Georgia and Emmanuel Nortey enjoying a romantic dinner date together"
+            />
+            <figcaption>Mom and Dad</figcaption>
+          </figure>
+          <figure class="gallery-item" role="gridcell">
             <img
               src="../img/mom.jpeg"
-              alt="woman dressed in african attire smiling"
+              alt="Georgia Momo Nortey wearing beautiful traditional African attire and smiling warmly"
             />
-            <div>Mama Georgia</div>
-          </div>
+            <figcaption>Mama Georgia</figcaption>
+          </figure>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Family Motto - 3D (Determination Determines Destiny)</p>
     </footer>
   </body>

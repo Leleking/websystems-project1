@@ -3,47 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the rich heritage of the Nortey family, including detailed genealogy, family traditions, values, and stories passed down through generations."
+    />
     <title>Heritage | Family Hub</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
       <div class="header-container">
         <div class="logo">
           <h1>Family Heritage</h1>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <input
             type="checkbox"
             id="mobile-menu-checkbox"
             class="mobile-menu-checkbox"
+            aria-hidden="true"
           />
-          <label for="mobile-menu-checkbox" class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label
+            for="mobile-menu-checkbox"
+            class="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </label>
-          <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="heritage.html" class="active">Heritage</a></li>
-            <li><a href="tree.html">Tree</a></li>
+          <ul class="nav-menu" role="menubar">
+            <li role="none">
+              <a href="../index.html" role="menuitem">Home</a>
+            </li>
+            <li role="none">
+              <a href="gallery.html" role="menuitem">Gallery</a>
+            </li>
+            <li role="none">
+              <a
+                href="heritage.html"
+                class="active"
+                role="menuitem"
+                aria-current="page"
+                >Heritage</a
+              >
+            </li>
+            <li role="none"><a href="tree.html" role="menuitem">Tree</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Our Family Tree</h2>
+    <main id="main-content" role="main">
+      <section aria-labelledby="heritage-intro-heading">
+        <h2 id="heritage-intro-heading">Our Family Tree</h2>
         <p>
           Explore our lineage and discover the connections that bind our family
           together across generations.
         </p>
       </section>
 
-      <section>
-        <h3>Grandparents Generation</h3>
+      <section aria-labelledby="grandparents-heading">
+        <h3 id="grandparents-heading">Grandparents Generation</h3>
         <div class="heritage-generation">
           <div class="heritage-person">
             <h4>Grandfather: Mr. Odarmetey (Laryea)</h4>
@@ -86,8 +113,8 @@
         </div>
       </section>
 
-      <section>
-        <h3>Children Generation</h3>
+      <section aria-labelledby="children-heading">
+        <h3 id="children-heading">Children Generation</h3>
         <div class="heritage-generation">
           <div class="heritage-person">
             <h4>Nashida Laryea</h4>
@@ -136,8 +163,8 @@
         </div>
       </section>
 
-      <section>
-        <h3>Grandchildren Generation</h3>
+      <section aria-labelledby="grandchildren-heading">
+        <h3 id="grandchildren-heading">Grandchildren Generation</h3>
         <div class="heritage-generation">
           <div class="heritage-person">
             <h4>Lionel Nortey</h4>
@@ -193,8 +220,8 @@
         </div>
       </section>
 
-      <section>
-        <h3>Great-Grandchildren Generation</h3>
+      <section aria-labelledby="great-grandchildren-heading">
+        <h3 id="great-grandchildren-heading">Great-Grandchildren Generation</h3>
         <div class="heritage-generation">
           <div class="heritage-person">
             <h4>Calix Coban Martey Nortey</h4>
@@ -207,8 +234,8 @@
         </div>
       </section>
 
-      <section>
-        <h3>Family Traditions & Values</h3>
+      <section aria-labelledby="traditions-heading">
+        <h3 id="traditions-heading">Family Traditions & Values</h3>
         <div>
           <h4>Core Values Passed Down:</h4>
           <ul>
@@ -290,7 +317,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Family Motto - 3D (Determination Determines Destiny)</p>
     </footer>
   </body>

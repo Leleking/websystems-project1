@@ -3,47 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to the Nortey family website. Explore our gallery, heritage, and family tree filled with photos, stories, and memories spanning generations."
+    />
     <title>Momo Hub | Family Hub</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
       <div class="header-container">
         <div class="logo">
           <h1>Welcome to the Norteys</h1>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <input
             type="checkbox"
             id="mobile-menu-checkbox"
             class="mobile-menu-checkbox"
+            aria-hidden="true"
           />
-          <label for="mobile-menu-checkbox" class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label
+            for="mobile-menu-checkbox"
+            class="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </label>
-          <ul class="nav-menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="pages/gallery.html">Gallery</a></li>
-            <li><a href="pages/heritage.html">Heritage</a></li>
-            <li><a href="pages/tree.html">Tree</a></li>
+          <ul class="nav-menu" role="menubar">
+            <li role="none">
+              <a
+                href="index.html"
+                class="active"
+                role="menuitem"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li role="none">
+              <a href="pages/gallery.html" role="menuitem">Gallery</a>
+            </li>
+            <li role="none">
+              <a href="pages/heritage.html" role="menuitem">Heritage</a>
+            </li>
+            <li role="none">
+              <a href="pages/tree.html" role="menuitem">Tree</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Journey through the lives of the Norteys</h2>
+    <main id="main-content" role="main">
+      <section aria-labelledby="welcome-heading">
+        <h2 id="welcome-heading">Journey through the lives of the Norteys</h2>
         <p>
           Welcome to the Norteys family website. Here you will find a collection
           of photos, videos, and stories that tell the story of the Nortey
           family. This is filled with laughter, love, cries, joys and many more.
         </p>
 
-        <h3>Explore Our</h3>
-        <ul>
+        <h3 id="explore-heading">Explore Our</h3>
+        <ul aria-labelledby="explore-heading">
           <li>
             <strong>Gallery:</strong> View photos, videos and see the memories
             of the Norteys
@@ -64,7 +93,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Family Motto - 3D (Determination Determines Destiny)</p>
     </footer>
   </body>
